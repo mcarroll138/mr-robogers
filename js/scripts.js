@@ -1,5 +1,5 @@
 //Business Logic
-
+let finalInt = []
 function containsInt(text) {
   let intSplit = text.toString().split("");
   let integers = intSplit.map(Number);
@@ -7,11 +7,71 @@ function containsInt(text) {
   if (integers.includes(NaN)) {
     return "Enter whole numbers only";
   }
-  return integers;
+  finalInt.push(integers);
 
 }
 
+for (let i = 0; 1 < finalInt.length; i++)
+  console.log(finalInt[i]);
 
+
+
+let finalInt = [];
+function containsInt(text) {
+  let intSplit = text.toString().split("");
+  let integers = intSplit.map(Number);
+
+
+  if (integers.includes(NaN)) {
+    return "Enter whole numbers only";
+  } else {
+    for (let i = 0; i < integers.length; i++) {
+      finalInt.push(integers[i]);
+    }
+    return finalInt;
+  }
+}
+
+
+
+
+
+
+
+
+function replaceNum(text) {
+  inputArray = []
+  if (containsInt.!includes(NaN)) {
+    inputArray.push(integers)
+  }
+}
+
+/* function startsWithVowel(text){
+  let word = text;
+  if (word.startsWith('a') || word.startsWith('e') ||word.startsWith('i') ||word.startsWith('o') ||word.startsWith('u')){
+      return true;
+  }
+  return false;
+}
+
+
+
+function pigLatin(text){
+ newWord = []
+  let passage = text.split(" ");
+passage.foreach(function(word){
+  if (startsWithVowel(word)){
+      newWord.push(word + "way");
+  }
+  else if(!startsWithVowel(passage)){
+      newWord.push(word + "const");
+  }
+  
+  // return word;
+})
+return newWord;
+}
+*/
 
 
 
@@ -68,32 +128,7 @@ function getArray(text) {
 //     if passag
 
 // }
-function startsWithVowel(text){
-  let word = text;
-  if (word.startsWith('a') || word.startsWith('e') ||word.startsWith('i') ||word.startsWith('o') ||word.startsWith('u')){
-      return true;
-  }
-  return false;
-}
 
-
-
-function pigLatin(text){
- newWord = []
-  let passage = text.split(" ");
-passage.foreach(function(word){
-  if (startsWithVowel(word)){
-      newWord.push(word + "way");
-  }
-  else if(!startsWithVowel(passage)){
-      newWord.push(word + "const");
-  }
-  
-  // return word;
-})
-return newWord;
-}
-*/
 const numbers = [10, 23, 34, 44];
 numbers.forEach(function (number) {
   alert('I Love ' + number);

@@ -4,10 +4,10 @@ function containsInt(text) {
   let intSplit = text.toString().split("");
   let integers = intSplit.map(Number);
   console.log(integers);
-  if (integers === isNaN) {
+  if (integers.includes(NaN)) {
     return "Enter whole numbers only";
   }
-  return "Good job entering a number!";
+  return integers;
 
 }
 

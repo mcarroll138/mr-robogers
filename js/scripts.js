@@ -1,6 +1,26 @@
 //Business Logic
 
-let userNumber = []
+function containsInt(text) {
+  let intSplit = text.toString().split("");
+  let integers = intSplit.map(Number);
+  console.log(integers);
+  if (integers === isNaN) {
+    return "Enter whole numbers only";
+  }
+  return "Good job entering a number!";
+
+}
+
+
+
+
+
+
+
+
+
+
+/*let userNumber = []
 
 function getArray(text) {
   let userInput = text.forEach;
@@ -8,9 +28,9 @@ function getArray(text) {
 }
 
 /*function countUp(countTo, countBy) {
-     if (badInputs.includes(parseInt(countTo)) || badInputs.includes(parseInt(countBy))) {
+     if (badInputs) {
   return "Enter a number!";
- } else if (Math.sign(countTo) === -1 || Math.sign(countBy) === -1) {
+ } else if (Math.sign(countTo) === -1) {
   return "Enter a positive number!";
  }
   for (let i = countBy; i <= countTo; i +=countBy) {
@@ -80,9 +100,9 @@ numbers.forEach(function (number) {
 });
 
 function containsInt(text) {
-  let intSplit = text.toString().split(" ");
+  let intSplit = text.toString().split("");
   let integers = intSplit.map(Number);
-  console.log(integers)
+  console.log(integers);
 
 }
 

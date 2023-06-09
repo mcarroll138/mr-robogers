@@ -33,14 +33,31 @@ function containsInt(text) {
 
 function beepInsert() {
   let numberToReplace1 = 1;
-  let stringBeep = "Beep";
+  let replacementStringBeep = "Beep!";
   let indexBeep = finalInt.indexOf(numberToReplace1);
-  if (indexBeep !== -1)
-    finalInt[indexBeep] = stringBeep;
+  if (indexBeep !== -1) {
+    finalInt[indexBeep] = replacementStringBeep;
+  };
 }
-console.log(finalInt);
 
+function boopInsert() {
+  let numberToReplace2 = 2;
+  let replacementStringBoop = "Boop!";
+  let indexBoop = finalInt.indexOf(numberToReplace2);
+  if (indexBoop !== -1) {
+    finalInt[indexBoop] = replacementStringBoop;
+  };
+}
+function processInput(inputText) {
+  reset();
+  containsInt(inputText);
+  beepInsert();
+  boopInsert();
+  console.log(finalInt);
+};
+}
 
+processInput(123);
 
 
 

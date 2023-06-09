@@ -21,7 +21,6 @@ function containsInt(text) {
   let intSplit = text.toString().split("");
   let integers = intSplit.map(Number);
 
-
   if (integers.includes(NaN)) {
     return "Enter whole numbers only";
   } else {
@@ -31,6 +30,15 @@ function containsInt(text) {
     return finalInt;
   }
 }
+
+function beepInsert() {
+  let numberToReplace1 = 1;
+  let stringBeep = "Beep";
+  let indexBeep = finalInt.indexOf(numberToReplace1);
+  if (indexBeep !== -1)
+    finalInt[indexBeep] = stringBeep;
+}
+console.log(finalInt);
 
 
 

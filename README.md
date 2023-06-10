@@ -33,13 +33,20 @@ Code: //function findInteger
 Expected Output: Code runs correctly without function
 
 Test: It replaces any text containing the integer 1, with Beep.
-Code function beepInsert()
+Code: function beepInsert()
 Expected Output: ['Beep!', 'Boop!', 'Won't you be my neighbor?', '4', '5', '6', '7', '8', '9', 'Beep', 'Beep']
 
 Test: It replaces any text containing the integer 2, with Boop.
-Code function boopInsert()
+Code: function boopInsert()
 Expected Output: ['Beep!', 'Boop!', 'Won't you be my neighbor?', '4', '5', '6', '7', '8', '9', 'Beep', 'Beep', 'Boop!']
 
+Test: It replaces any text containing the integer 3, with Wont you be my neighbor.
+Code: function neighborInsert()
+Expected Output: ['Beep!', 'Boop!', 'Won't you be my neighbor?', '4', '5', '6', '7', '8', '9', 'Beep', 'Beep', 'Boop!', 'Wont you be my neighbor.']
+
+Test: It adds the hierarchy of substitutions to the code.
+Code: if (element.toString().includes("1")
+Expected Output: ['Beep!', 'Boop!', 'Won't you be my neighbor?', '4', '5', '6', '7', '8', '9', 'Beep', 'Beep', 'Boop!', 'Wont you be my neighbor.']
 
 
 

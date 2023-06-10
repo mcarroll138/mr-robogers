@@ -1,9 +1,25 @@
 //Business Logic
-let userArray = []
+let userArray = [];
+
 function userInput(number) {
   let newArray = [];
-  for (i = 0; i <= number; i++) {
+  let outputArray = [];
+
+  for (let i = 0; i <= number; i++) {
     newArray.push(i);
+  }
+
+  for (let i = 0; i < newArray.length; i++) {
+    let element = newArray[i];
+    if (element.toString().includes("1")) {
+      element = "Beep!";
+    } else if (element.toString().includes("2")) {
+      element = "Boop!";
+    } else if (element.toString().includes("3")) {
+      element = "Won't you be my neighbor?";
+    }
+
+    outputArray.push(element);
   }
   userArray = newArray;
   //findInteger();
@@ -20,7 +36,7 @@ function beepInsert() {
     let currentNumber = userArray[i];
     if (currentNumber.toString().includes(numberToReplace1.toString())) {
       userArray[i] = replacementStringBeep;
-    }
+    };
   };
 }
 
@@ -31,108 +47,22 @@ function boopInsert() {
     let currentNumber = userArray[i];
     if (currentNumber.toString().includes(numberToReplace2.toString())) {
       userArray[i] = replacementStringBoop;
-    }
-  }
+    };
+  };
 }
 
 function neighborInsert() {
-  const numberToReplace3 = 3;
+  const numberToReplace3 = "3";
   const replacementStringNeighbor = "Won't you be my neighbor?";
-  let indexNeighbor = userArray.indexOf(numberToReplace3);
-  if (indexNeighbor !== -1) {
-    userArray[indexNeighbor] = replacementStringNeighbor
-  };
-}
-/*
-
-
-
-
-
-
-
-function beepInsert() {
-  let numberToReplace1 = 1;
-  let replacementStringBeep = "Beep!";
-  let indexBeep = finalInt.indexOf(numberToReplace1);
-  if (indexBeep !== -1) {
-    finalInt[indexBeep] = replacementStringBeep;
+  for (let i = 0; i < userArray.length; i++) {
+    if (userArray[i].toString().includes(numberToReplace3)) {
+      userArray[i] = replacementStringNeighbor;
+    };
   };
 }
 
-function boopInsert() {
-  let numberToReplace2 = 2;
-  let replacementStringBoop = "Boop!";
-  let indexBoop = finalInt.indexOf(numberToReplace2);
-  if (indexBoop !== -1) {
-    finalInt[indexBoop] = replacementStringBoop;
-  };
-}
 
-function neighborInsert() {
-  let numberToReplace3 = 3;
-  let replacementStringNeighbor = "Won't you be my neighbor?";
-  let indexNeighbor = finalInt.indexOf(numberToReplace3);
-  if (indexNeighbor !== -1) {
-    finalInt[indexNeighbor] = replacementStringNeighbor;
-  };
-}
-
-function reset() {
-  finalInt = [];
-}
-
-function processInput(inputText) {
-  reset();
-  containsInt(inputText);
-  beepInsert();
-  boopInsert();
-  neighborInsert();
-  console.log(finalInt);
-};
-
-
-
-
-
-
-
-
-/* function startsWithVowel(text){
-  let word = text;
-  if (word.startsWith('a') || word.startsWith('e') ||word.startsWith('i') ||word.startsWith('o') ||word.startsWith('u')){
-      return true;
-  }
-  return false;
-}
-
-
-
-function pigLatin(text){
- newWord = []
-  let passage = text.split(" ");
-passage.foreach(function(word){
-  if (startsWithVowel(word)){
-      newWord.push(word + "way");
-  }
-  else if(!startsWithVowel(passage)){
-      newWord.push(word + "const");
-  }
-  
-  // return word;
-})
-return newWord;
-}
-*/
-
-
-
-
-
-
-
-
-/*let userNumber = []
+// UI Logic
 
 function getArray(text) {
   let userInput = text.forEach;

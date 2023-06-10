@@ -24,15 +24,24 @@ Test: It looks for the number 2 in the userArray and replaces with the string "B
 Code: function beepInsert()
 Expected Output: ['Beep!', 'Boop!', 3]
 
-Ignore all test below, rerunning test after misinterperting the project prompt.
-
-Test: It looks for the number 3 in the finalInt and replaces with the string "Won't you be my neighbor?"
+Test: It looks for the number 3 in the userArray and replaces with the string "Won't you be my neighbor?"
 Code: function neighborInsert()
 Expected Output: ['Beep!', 'Boop!', 'Won't you be my neighbor?']
 
-Test: It looks for multiple instances of the number 1 and replaces all with "Beep!"
-code: function beepInsert()
-Expected output: Beep!, Boop!, 3, Beep!
+Test: It refactors code to remove findInteger function
+Code: //function findInteger
+Expected Output: Code runs correctly without function
+
+Test: It replaces any text containing the integer 1, with Beep.
+Code function beepInsert()
+Expected Output: ['Beep!', 'Boop!', 'Won't you be my neighbor?', '4', '5', '6', '7', '8', '9', 'Beep', 'Beep']
+
+Test: It replaces any text containing the integer 2, with Boop.
+Code function boopInsert()
+Expected Output: ['Beep!', 'Boop!', 'Won't you be my neighbor?', '4', '5', '6', '7', '8', '9', 'Beep', 'Beep', 'Boop!']
+
+
+
 
 
 

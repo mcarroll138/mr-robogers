@@ -8,6 +8,8 @@ function userInput(number) {
   userArray = newArray;
   findInteger();
   beepInsert();
+  boopInsert();
+  neighborInsert();
   return newArray;
 }
 
@@ -33,8 +35,16 @@ function boopInsert() {
   let indexBoop = userArray.indexOf(numberToReplace2);
   if (indexBoop !== -1) {
     userArray[indexBoop] = replacementStringBoop;
-  }
+  };
+}
 
+function neighborInsert() {
+  const numberToReplace3 = 3;
+  const replacementStringNeighbor = "Won't you be my neighbor?";
+  let indexNeighbor = userArray.indexOf(numberToReplace3);
+  if (indexNeighbor !== -1) {
+    userArray[indexNeighbor] = replacementStringNeighbor
+  };
 }
 /*
 

@@ -1,5 +1,5 @@
 //Business Logic
-
+const userArray = newArray
 function userInput(number) {
   let newArray = [];
   for (i = 0; i <= number; i++) {
@@ -8,6 +8,16 @@ function userInput(number) {
   return newArray;
 }
 
+function findInteger() {
+  if userArray.includes(1) {
+    return "integer found"
+  }
+}
+/*
+function arrayContains(text) {
+  specialNumbers = []
+ if (userInput(newArray)
+}
 /*
 function arrayInput(number) {
   let finalResult = [];

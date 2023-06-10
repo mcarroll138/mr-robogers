@@ -64,65 +64,30 @@ function neighborInsert() {
 
 // UI Logic
 
-function getArray(text) {
-  let userInput = text.forEach;
-  console.log(userInput)
+window.onload = function () {
+  document.querySelector("button").addEventListener("click", whenClicked);
+};
+
+function whenClicked() {
+  event.preventDefault();
+  const userNumber = document.getElementById("userNumber").value;
+  if (userNumber < 0) {
+    const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = "Mr. Roboger only deals with positive numbers! Try again.";
+    return;
+  }
+  const result = userInput(+(userNumber));
+  const resultDiv = document.getElementById("results");
+  resultDiv.innerHTML = result.join(", ");
 }
 
-/*function countUp(countTo, countBy) {
-     if (badInputs) {
-  return "Enter a number!";
- } else if (Math.sign(countTo) === -1) {
-  return "Enter a positive number!";
- }
-  for (let i = countBy; i <= countTo; i +=countBy) {
-      finalResult.push(i);
-  }
-  return finalResult;
-  
+let form = document.querySelector("form");
+form.onsubmit = function (event) {
+  event.preventDefault();
+  inputTotal();
 };
 
-/*function countUp(countTo, countBy) {
-  let finalResult = [];
-  const badInputs = ["", NaN];
- if (badInputs.includes(parseInt(countTo)) || badInputs.includes(parseInt(countBy))) {
-  return "Enter a number!";
- } else if (Math.sign(countTo) === -1 || Math.sign(countBy) === -1) {
-  return "Enter a positive number!";
- }
-  for (let i = countBy; i <= countTo; i +=countBy) {
-      finalResult.push(i);
-  }
-  return finalResult;
-  
-};
-
-\*
-
-//Business logic
-
-// function pigLatin(vowel, text) {
-//     const passage = text;
-//     let passageLength = passage.length;
-
-//     // const vowelArray = ['a' ,'e' ,'i' ,'o' ,'u']
-//     for (let i = 0; i <= passageLength; i++ )
-//     if passag
-
-// }
-
-const numbers = [10, 23, 34, 44];
-numbers.forEach(function (number) {
-  alert('I Love ' + number);
+let button = document.querySelector("button");
+button.addEventListener("click", function () {
+  inputTotal();
 });
-
-function containsInt(text) {
-  let intSplit = text.toString().split("");
-  let integers = intSplit.map(Number);
-  console.log(integers);
-
-}
-
-
-
-//User Logic

@@ -1,78 +1,38 @@
 //Business Logic
-const userArray = newArray
+let userArray = []
 function userInput(number) {
   let newArray = [];
   for (i = 0; i <= number; i++) {
     newArray.push(i);
   }
+  userArray = newArray;
+  findInteger();
+  beepInsert();
   return newArray;
 }
 
 function findInteger() {
-  if userArray.includes(1) {
-    return "integer found"
-  }
-}
-/*
-function arrayContains(text) {
-  specialNumbers = []
- if (userInput(newArray)
-}
-/*
-function arrayInput(number) {
-  let finalResult = [];
-  const badInputs = [NaN];
-  if (badInputs.includes(parseInt(number))) {
-    return "Enter a number!";
-  } else if (Math.sign(number) === -1) {
-    return "Enter a positive number!";
-  }
-  for (let i = 0; i <= number; i += number) {
-    finalResult.push(i);
-  }
-  return finalResult;
-
-};
-let number = 5;
-let arrayFinalResults = arrayInput(number).length;
-console.log(arrayFinalResults);
-
-
-/*
-let userArrayLength = userInputArray;
-
-function countArray(number) {
-  let userInputArray = [];
-
-  for (let i = 0; 1 <= number; i++) {
-    userInputArray.push(i);
-  }
-  console.log(userInputArray.length);
-}
-
-countArray.userInputArray();
-
-
-
-
-
-
-
-
-/* let finalInt = [];
-function containsInt(text) {
-  let intSplit = text.toString().split("");
-  let integers = intSplit.map(Number);
-
-  if (integers.includes(NaN)) {
-    return "Enter whole numbers only";
+  if (userArray.includes(1) || userArray.includes(2) || userArray.includes(3)) {
+    console.log("integer found");
   } else {
-    for (let i = 0; i < integers.length; i++) {
-      finalInt.push(integers[i]);
-    }
-    return finalInt;
+    console.log("integer not found");
   }
 }
+function beepInsert() {
+  let numberToReplace1 = 1;
+  let replacementStringBeep = "Beep!";
+  let indexBeep = userArray.indexOf(numberToReplace1);
+  if (indexBeep !== -1) {
+    userArray[indexBeep] = replacementStringBeep;
+  };
+}
+/*
+
+
+
+
+
+
 
 function beepInsert() {
   let numberToReplace1 = 1;

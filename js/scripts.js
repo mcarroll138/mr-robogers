@@ -1,22 +1,55 @@
 //Business Logic
-let finalInt = []
-function containsInt(text) {
-  let intSplit = text.toString().split("");
-  let integers = intSplit.map(Number);
-  console.log(integers);
-  if (integers.includes(NaN)) {
-    return "Enter whole numbers only";
-  }
-  finalInt.push(integers);
 
+function userInput(number) {
+  let newArray = [];
+  for (i = 0; i <= number; i++) {
+    newArray.push(i);
+  }
+  return newArray;
 }
 
-for (let i = 0; 1 < finalInt.length; i++)
-  console.log(finalInt[i]);
+/*
+function arrayInput(number) {
+  let finalResult = [];
+  const badInputs = [NaN];
+  if (badInputs.includes(parseInt(number))) {
+    return "Enter a number!";
+  } else if (Math.sign(number) === -1) {
+    return "Enter a positive number!";
+  }
+  for (let i = 0; i <= number; i += number) {
+    finalResult.push(i);
+  }
+  return finalResult;
+
+};
+let number = 5;
+let arrayFinalResults = arrayInput(number).length;
+console.log(arrayFinalResults);
+
+
+/*
+let userArrayLength = userInputArray;
+
+function countArray(number) {
+  let userInputArray = [];
+
+  for (let i = 0; 1 <= number; i++) {
+    userInputArray.push(i);
+  }
+  console.log(userInputArray.length);
+}
+
+countArray.userInputArray();
 
 
 
-let finalInt = [];
+
+
+
+
+
+/* let finalInt = [];
 function containsInt(text) {
   let intSplit = text.toString().split("");
   let integers = intSplit.map(Number);
@@ -48,28 +81,35 @@ function boopInsert() {
     finalInt[indexBoop] = replacementStringBoop;
   };
 }
+
+function neighborInsert() {
+  let numberToReplace3 = 3;
+  let replacementStringNeighbor = "Won't you be my neighbor?";
+  let indexNeighbor = finalInt.indexOf(numberToReplace3);
+  if (indexNeighbor !== -1) {
+    finalInt[indexNeighbor] = replacementStringNeighbor;
+  };
+}
+
+function reset() {
+  finalInt = [];
+}
+
 function processInput(inputText) {
   reset();
   containsInt(inputText);
   beepInsert();
   boopInsert();
+  neighborInsert();
   console.log(finalInt);
 };
-}
-
-processInput(123);
 
 
 
 
 
 
-function replaceNum(text) {
-  inputArray = []
-  if (containsInt.!includes(NaN)) {
-    inputArray.push(integers)
-  }
-}
+
 
 /* function startsWithVowel(text){
   let word = text;

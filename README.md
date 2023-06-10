@@ -16,26 +16,15 @@ Test: "It finds the number 3 and returns a console.log of 'integer found.'
 Code: function findInteger (3)
 Expected Output: 'integer found.'
 
-Test: It looks for the number 1 in the finalInt and replaces with the string "Beep."
+Test: It looks for the number 1 in the userArray and replaces with the string "Beep."
 Code: function beepInsert()
 Expected Output: ['Beep', 2, 3]
 
-Ignore all test below, rerunning test after misinterperting the project prompt.
-
-
-
-
-Test: It makes finalInt a global veriable.
-Code: let finalInt
-Expected Output: Calls veriable on the global level.
-
-Test: It looks for the number 1 in the finalInt and replaces with the string "Beep."
-Code: function beepInsert()
-Expected Output: ['Beep', 2, 3]
-
-Test: It looks for the number 2 in the finalInt and replaces with the string "Boop."
+Test: It looks for the number 2 in the userArray and replaces with the string "Boop."
 Code: function beepInsert()
 Expected Output: ['Beep!', 'Boop!', 3]
+
+Ignore all test below, rerunning test after misinterperting the project prompt.
 
 Test: It looks for the number 3 in the finalInt and replaces with the string "Won't you be my neighbor?"
 Code: function neighborInsert()

@@ -19,12 +19,22 @@ function findInteger() {
   }
 }
 function beepInsert() {
-  let numberToReplace1 = 1;
-  let replacementStringBeep = "Beep!";
+  const numberToReplace1 = 1;
+  const replacementStringBeep = "Beep!";
   let indexBeep = userArray.indexOf(numberToReplace1);
   if (indexBeep !== -1) {
     userArray[indexBeep] = replacementStringBeep;
   };
+}
+
+function boopInsert() {
+  const numberToReplace2 = 2;
+  const replacementStringBoop = "Boop!";
+  let indexBoop = userArray.indexOf(numberToReplace2);
+  if (indexBoop !== -1) {
+    userArray[indexBoop] = replacementStringBoop;
+  }
+
 }
 /*
 

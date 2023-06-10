@@ -6,46 +6,40 @@ function userInput(number) {
     newArray.push(i);
   }
   userArray = newArray;
-  findInteger();
+  //findInteger();
   beepInsert();
   boopInsert();
   neighborInsert();
   return newArray;
 }
 
-function findInteger() {
-  if (userArray.includes(1) || userArray.includes(2) || userArray.includes(3)) {
-    console.log("integer found");
-  } else {
-    console.log("integer not found");
-  }
-}
 function beepInsert() {
   const numberToReplace1 = 1;
   const replacementStringBeep = "Beep!";
-  let indexBeep = userArray.indexOf(numberToReplace1);
-  if (indexBeep !== -1) {
-    userArray[indexBeep] = replacementStringBeep;
-  };
-}
+  for (let i = 0; i < userArray.length; i++) {
+    let currentNumber = userArray[i];
+    if (currentNumber.toString().includes(numberToReplace1.toString())) {
+      userArray[i] = replacementStringBeep;
+    };
+  }
 
-function boopInsert() {
-  const numberToReplace2 = 2;
-  const replacementStringBoop = "Boop!";
-  let indexBoop = userArray.indexOf(numberToReplace2);
-  if (indexBoop !== -1) {
-    userArray[indexBoop] = replacementStringBoop;
-  };
-}
+  function boopInsert() {
+    const numberToReplace2 = 2;
+    const replacementStringBoop = "Boop!";
+    let indexBoop = userArray.indexOf(numberToReplace2);
+    if (indexBoop !== -1) {
+      userArray[indexBoop] = replacementStringBoop;
+    };
+  }
 
-function neighborInsert() {
-  const numberToReplace3 = 3;
-  const replacementStringNeighbor = "Won't you be my neighbor?";
-  let indexNeighbor = userArray.indexOf(numberToReplace3);
-  if (indexNeighbor !== -1) {
-    userArray[indexNeighbor] = replacementStringNeighbor
-  };
-}
+  function neighborInsert() {
+    const numberToReplace3 = 3;
+    const replacementStringNeighbor = "Won't you be my neighbor?";
+    let indexNeighbor = userArray.indexOf(numberToReplace3);
+    if (indexNeighbor !== -1) {
+      userArray[indexNeighbor] = replacementStringNeighbor
+    };
+  }
 /*
 
 
